@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #00685f;
+  --color-primary-hover: #005049;
+  --color-primary-container: #008378;
+  --color-primary-light: #e6f5f3;
+  --color-primary-fixed: #89f5e7;
+
+  --color-secondary: #fd651e;
+  --color-secondary-hover: #e05312;
+  --color-secondary-container: #ffdbce;
+  --color-secondary-light: #fff2eb;
+
+  --color-tertiary: #006194;
+  --color-tertiary-light: #e6f3fa;
+
+  --color-surface: #faf8ff;
+  --color-surface-container: #f0f3fa;
+  --color-surface-container-high: #e5e9f4;
+  --color-surface-card: #ffffff;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-label: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Utilities & Animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.95); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Global Viewport & Overflow Protection */
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
